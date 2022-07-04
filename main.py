@@ -4,7 +4,7 @@ import xlwt
 from xlwt import Workbook
 
 
-# set the style for the excel sheet
+# set the style for the Excel sheet
 def set_style(font_name, bold=False):
     style = xlwt.XFStyle()
     font = xlwt.Font()
@@ -189,31 +189,12 @@ payload = {
         __typename
         }
 
-        query OfferDetail_Journey($journeyId: String!, $redirectUrl: String!, $journeyShortName: String!, $dateOverride: Time, $stringDebug: Boolean) {
-        journey(journeyId: $journeyId, dateOverride: $dateOverride, stringDebug: $stringDebug) {
-            id
-            offers {
-            ...OfferDetail_Journey_Offer
-            __typename
-            }
-            assets {
-            ...ActionsContext_JourneyAssets
-            __typename
-            }
-            accountLinkConfig(redirectUrl: $redirectUrl, journeyShortName: $journeyShortName, stringDebug: $stringDebug) {
-            accountType
-            linkedAccountConfirmation
-            linkingInstructions
-            linkingUrl
-            __typename
-            }
-            game {
-            ...OfferDetail_Journey_Game
-            __typename
-            }
-            __typename
-        }
-        }
+        query OfferDetail_Journey($journeyId: String!, $redirectUrl: String!, $journeyShortName: String!, 
+        $dateOverride: Time, $stringDebug: Boolean) { journey(journeyId: $journeyId, dateOverride: $dateOverride, 
+        stringDebug: $stringDebug) { id offers { ...OfferDetail_Journey_Offer __typename } assets { 
+        ...ActionsContext_JourneyAssets __typename } accountLinkConfig(redirectUrl: $redirectUrl, journeyShortName: 
+        $journeyShortName, stringDebug: $stringDebug) { accountType linkedAccountConfirmation linkingInstructions 
+        linkingUrl __typename } game { ...OfferDetail_Journey_Game __typename } __typename } } 
 
         fragment ConflictingClaimAccount on ConflictingClaimUser {
         fullName
@@ -224,7 +205,10 @@ payload = {
     "extensions": {}
 }
 headers = {
-    "cookie": "session-id=141-5621786-7681141; session-id-time=2082787201l; session-token=CqPxDdSyXqJQPpKdnXo69XZbMfrbR5R9kHmWgu6nyp9ePyI9EgKGBA9zKPuYH1BIpThOB4ENNqmSWlJ%2Bb9QUotQCzV2J0sa5U%2Bptf2Fe0NUFYyB1SJOS%2Btg55H3NimTIQXs8OGjbhPLP3w8s%2FulFX%2BAnBcmTDGlcf6MvZHi3ye19lqx0qHEy43rKsPeOsTaQpsIfnUWViMWC5XFlaMsQJQ",
+    "cookie": "session-id=141-5621786-7681141; session-id-time=2082787201l; "
+              "session-token=CqPxDdSyXqJQPpKdnXo69XZbMfrbR5R9kHmWgu6nyp9ePyI9EgKGBA9zKPuYH1BIpThOB4ENNqmSWlJ"
+              "%2Bb9QUotQCzV2J0sa5U%2Bptf2Fe0NUFYyB1SJOS%2Btg55H3NimTIQXs8OGjbhPLP3w8s%2FulFX"
+              "%2BAnBcmTDGlcf6MvZHi3ye19lqx0qHEy43rKsPeOsTaQpsIfnUWViMWC5XFlaMsQJQ",
     "Host": "gaming.amazon.com",
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0",
     "Accept": "*/*",
@@ -233,7 +217,11 @@ headers = {
     "Referer": "https://gaming.amazon.com/loot/leagueoflegends",
     "Origin": "https://gaming.amazon.com",
     "Connection": "keep-alive",
-    "Cookie": "session-id=141-5621786-7681141; session-id-time=2082787201l; unique_id=0ee709a8-d203-41; ubid-main=135-8392164-9500608; twitch-prime-language=en-US; session-token=CqPxDdSyXqJQPpKdnXo69XZbMfrbR5R9kHmWgu6nyp9ePyI9EgKGBA9zKPuYH1BIpThOB4ENNqmSWlJ+b9QUotQCzV2J0sa5U+ptf2Fe0NUFYyB1SJOS+tg55H3NimTIQXs8OGjbhPLP3w8s/ulFX+AnBcmTDGlcf6MvZHi3ye19lqx0qHEy43rKsPeOsTaQpsIfnUWViMWC5XFlaMsQJQ",
+    "Cookie": "session-id=141-5621786-7681141; session-id-time=2082787201l; unique_id=0ee709a8-d203-41; "
+              "ubid-main=135-8392164-9500608; twitch-prime-language=en-US; "
+              "session-token=CqPxDdSyXqJQPpKdnXo69XZbMfrbR5R9kHmWgu6nyp9ePyI9EgKGBA9zKPuYH1BIpThOB4ENNqmSWlJ"
+              "+b9QUotQCzV2J0sa5U+ptf2Fe0NUFYyB1SJOS+tg55H3NimTIQXs8OGjbhPLP3w8s/ulFX"
+              "+AnBcmTDGlcf6MvZHi3ye19lqx0qHEy43rKsPeOsTaQpsIfnUWViMWC5XFlaMsQJQ",
     "Sec-Fetch-Dest": "empty",
     "Sec-Fetch-Mode": "no-cors",
     "Sec-Fetch-Site": "same-origin",
