@@ -40,7 +40,8 @@
 
 ## Download
 
-You can [download](https://github.com/t0ry003/) the latest version of League of Legends Prime Capsule Scraper for
+You can [download](https://github.com/t0ry003/PrimeCapsuleScraper/releases/tag/v1.0) the latest version of League of
+Legends Prime Capsule Scraper for
 Windows, macOS and Linux.
 
 ## Guide:
